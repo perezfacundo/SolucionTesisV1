@@ -17,6 +17,8 @@
     <link href="~/css/sb-admin-2.css" rel="stylesheet">
     <link href="~/vendor/toastr/toastr.min.css" rel="stylesheet">
     <link href="~/vendor/sweetalert/sweetalert.css" rel="stylesheet">
+    @await RenderSectionAsync("Estilos", required: false)
+
 </head>
 <body>
     <!-- Page Wrapper -->
@@ -52,10 +54,10 @@
                 </a>
                 <div id="collapseAdministracion" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="@Url.Action("","")">Solicitudes</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Solicitud")">Solicitudes</a>
                         <a class="collapse-item" href="@Url.Action("Index","Cliente")">Clientes</a>
-                        <a class="collapse-item" href="@Url.Action("","")">Empleados</a>
-                        <a class="collapse-item" href="@Url.Action("","")">Transportes</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Empleado")">Empleados</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Transporte")">Transportes</a>
                     </div>
                 </div>
             </li>

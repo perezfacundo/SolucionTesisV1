@@ -33,41 +33,30 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Correo</th>
+                            <th>DNI</th>
+                            <th>Apellidos</th>
+                            <th>Nombres</th>
                             <th>Telefono</th>
-                            <th>Rol</th>
+                            <th>Correo</th>
+                            <th>Domicilio</th>
                             <th>Estado</th>
+                            <th>Provincia</th>
+                            <th>Localidad</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img style="height:60px ;" src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?w=300" class="rounded mx-auto d-block" /></td>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td><span class="badge badge-info">Activo</span></td>
-                            <td>
-                                <button class="btn btn-primary btn-sm">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </button>
-                                <button class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><img style="height:60px ;" src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?w=300" class="rounded mx-auto d-block" /></td>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
+                            <td>41599035</td>
+                            <td>Perez Quinteros</td>
+                            <td>Facundo</td>
+                            <td>3521513459</td>
+                            <td>perezfaq98@gmail.com</td>
+                            <td>General Paz 439</td>
                             <td><span class="badge badge-danger">No Activo</span></td>
+                            <td>Cordoba</td>
+                            <td>Dean Funes</td>
                             <td>
                                 <button class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i>
@@ -101,44 +90,81 @@
                         <div class="col-sm-8">
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <label for="txtNombre">Nombre</label>
-                                    <input type="text" class="form-control form-control-sm input-validar" id="txtNombre" name="Nombre">
+                                    <label for="txtDNI">DNI</label>
+                                    <input type="number" class="form-control form-control-sm input-validar" id="txtDNI" name="DNI">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="txtCorreo">Correo</label>
                                     <input type="email" class="form-control form-control-sm input-validar" id="txtCorreo" name="Correo">
                                 </div>
                             </div>
+
                             <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="txtApellidos">Apellidos</label>
+                                    <input type="text" class="form-control form-control-sm input-validar" id="txtApellidos" name="Apellidos">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="txtNombres">Nombres</label>
+                                    <input type="text" class="form-control form-control-sm input-validar" id="txtNombres" name="Nombres">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="txtFechaNac">Fecha de nacimiento</label>
+                                    <input type="datetime" class="form-control form-control-sm input-validar" id="txtFechaNac" name="FechaNac">
+                                </div>
                                 <div class="form-group col-sm-6">
                                     <label for="txtTelefono">Telefono</label>
                                     <input type="text" class="form-control form-control-sm input-validar" id="txtTelefono" name="Telefono">
                                 </div>
-                                <div class="form-group col-sm-6">
-                                    <label for="cboRol">Rol</label>
-                                    <select class="form-control form-control-sm" id="cboRol">
-                                        <option value="1">Administrador</option>
-                                    </select>
-                                </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <label for="cboEstado">Estado</label>
-                                    <select class="form-control form-control-sm" id="cboEstado">
-                                        <option value="1">Activo</option>
-                                        <option value="0">No Activo</option>
+                                    <label for="txtDomicilio">Domicilio</label>
+                                    <input type="text" class="form-control form-control-sm input-validar" id="txtDomicilio" name="Domicilio">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="cbEstado">Estado</label>
+                                    <select class="form-control form-control-sm" id="cbEstado">
+                                        <option value="1">Adeuda</option>
+                                        <option value="2">No adeuda</option>
+                                        <option value="3">Activo</option>
+                                        <option value="4">Inactivo</option>
+                                        <option value="5">En viaje</option>
+                                        <option value="6">En receso</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="cbProvincia">Provincia</label>
+                                    <select class="form-control form-control-sm" id="cbProvincia">
+                                        <option value="1">CABA</option>
+                                        <option value="2">Buenos Aires</option>
+                                        <option value="3">Chaco</option>
+                                        <option value="4">Chubut</option>
+                                        <option value="5">Cordoba</option>
+                                        <option value="6">Corrientes</option>
+                                        <option value="7">Rio Negro</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <label for="txtFoto">Foto</label>
-                                    <input class="form-control-file" type="file" id="txtFoto" />
+                                    <label for="cbLocalidad">Localidad</label>
+                                    <select class="form-control form-control-sm" id="cbLocalidad">
+                                        <option value="1">Dean Funes</option>
+                                        <option value="2">Jesus Maria</option>
+                                        <option value="3">Santa Maria de Punilla</option>
+                                        <option value="4">Juarez Celman</option>
+                                        <option value="5">Guiñazú</option>
+                                        <option value="6">San José de la Dormida</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <img id="imgUsuario" style="max-width:200px;" src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?w=300" class="rounded mx-auto d-block" alt="Foto usuario">
-                        </div>
-
                     </div>
                 </form>
             </div>
